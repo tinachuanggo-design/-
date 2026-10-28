@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | 輕奢舒適內著 - 展現最自然的自信美</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome 圖示庫 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Noto Sans TC & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            200: '#fecdd3',
+                            300: '#fda4af',
+                            400: '#fb7185',
+                            500: '#f43f5e',
+                            800: '#9f1239',
+                        },
+                        nude: {
+                            50: '#fdfbf7',
+                            100: '#f7f2ea',
+                            200: '#eee3d3',
+                            300: '#e2d0b9',
+                            400: '#cfb495',
+                            800: '#5c4a38',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-nude-50 text-gray-700 font-sans antialiased selection:bg-rose-200 selection:text-rose-800">
+
+    <!-- 導覽列 Navbar -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="font-serif text-3xl font-bold tracking-widest text-rose-800 flex items-center gap-2">
+                        <span>AURA</span>
+                        <span class="text-xs font-sans tracking-normal px-2 py-0.5 bg-rose-100 text-rose-800 rounded-full font-normal">INTIMATES</span>
+                    </a>
+                </div>
+
+                <!-- 桌面版選單 -->
+                <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wider">
+                    <a href="#features" class="text-gray-600 hover:text-rose-500 transition-colors py-2">品牌特色</a>
+                    <a href="#products" class="text-gray-600 hover:text-rose-500 transition-colors py-2">熱銷系列</a>
+                    <a href="#size-calculator" class="text-gray-600 hover:text-rose-500 transition-colors py-2">身材尺寸建議</a>
+                    <a href="#membership" class="text-gray-600 hover:text-rose-500 transition-colors py-2">專屬VIP</a>
+                </div>
+
+                <!-- 右側行動按鈕 -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#membership" class="bg-rose-500 hover:bg-rose-600 text-white px-5 py-2.5 rounded-full text-sm font-medium shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+                        <i class="fa-regular fa-user mr-2"></i>加入會員領 $200
+                    </a>
+                </div>
+
+                <!-- 手機版選單開關按鈕 -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-rose-500 focus:outline-none p-2" aria-label="Toggle Menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 手機版下拉選單 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#features" class="block px-3 py-2 text-gray-600 hover:bg-rose-50 rounded-lg">品牌特色</a>
+            <a href="#products" class="block px-3 py-2 text-gray-600 hover:bg-rose-50 rounded-lg">熱銷系列</a>
+            <a href="#size-calculator" class="block px-3 py-2 text-gray-600 hover:bg-rose-50 rounded-lg">身材尺寸建議</a>
+            <a href="#membership" class="block px-3 py-2 text-gray-600 hover:bg-rose-50 rounded-lg">專屬VIP</a>
+            <a href="#membership" class="block text-center bg-rose-500 text-white py-3 rounded-full font-medium mt-4 shadow">
+                加入會員領 $200 購物金
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero 主視覺 Banner -->
+    <section class="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-gradient-to-b from-nude-100 to-nude-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="inline-block px-4 py-1.5 bg-rose-100 text-rose-800 rounded-full text-xs font-semibold tracking-wider uppercase">
+                        2026 SS New Collection
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif text-gray-900 leading-tight">
+                        重新定義舒適<br>
+                        <span class="italic text-rose-500 font-normal">溫柔包覆</span> 每一個瞬間
+                    </h1>
+                    <p class="text-gray-600 text-base sm:text-lg max-w-lg mx-auto md:mx-0 leading-relaxed">
+                        選用雲感無痕裸感面料，專為東方女性體型打造。無鋼圈的零束縛體驗，讓妳展現最優雅自然的自信曲線。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+                        <a href="#products" class="bg-rose-500 hover:bg-rose-600 text-white px-8 py-3.5 rounded-full font-medium shadow-lg hover:shadow-rose-200 transition-all text-center">
+                            探索熱銷系列
+                        </a>
+                        <a href="#size-calculator" class="bg-white hover:bg-nude-100 text-gray-800 border border-nude-300 px-8 py-3.5 rounded-full font-medium transition-all text-center">
+                            測量專屬尺寸 <i class="fa-solid fa-arrow-right-long ml-2 text-rose-400"></i>
+                        </a>
+                    </div>
+                    <!-- 滿意度標籤 -->
+                    <div class="pt-6 border-t border-nude-200/80 flex items-center justify-center md:justify-start gap-8 text-xs text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-rose-500"></i>
+                            <span>100% 親膚透氣面料</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-check text-rose-500"></i>
+                            <span>7天鑑賞期免費退換</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 主圖形象區 -->
+                <div class="relative">
+                    <div class="w-full h-[420px] sm:h-[500px] rounded-3xl overflow-hidden shadow-2xl relative bg-nude-200">
+                        <img src="https://images.unsplash.com/photo-1583846783214-7229a91b20ed?auto=format&fit=crop&w=1000&q=80" 
+                             alt="AURA 輕奢內衣" 
+                             class="w-full h-full object-cover object-center"
+                             onerror="this.src='https://placehold.co/800x1000/eee3d3/5c4a38?text=AURA+Intimates'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+                    </div>
+                    <!-- 浮動卡片小裝飾 -->
+                    <div class="absolute -bottom-6 -left-4 sm:left-6 glass-card p-4 rounded-2xl shadow-xl flex items-center gap-3 max-w-[220px]">
+                        <div class="w-10 h-10 rounded-full bg-rose-100 flex items-center justify-center text-rose-500 flex-shrink-0">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs font-bold text-gray-800">超過 98.4% 滿意度</div>
+                            <div class="text-[10px] text-gray-500">試穿體驗好評回饋</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 特色介紹 Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-rose-500 text-sm font-semibold tracking-widest uppercase">Why Choose AURA</span>
+                <h2 class="text-3xl font-serif font-bold text-gray-900 mt-2">工藝與舒適的完美結合</h2>
+                <div class="w-12 h-0.5 bg-rose-400 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- 特色 1 -->
+                <div class="p-8 rounded-2xl bg-nude-50/60 border border-nude-100 hover:border-rose-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-500 text-2xl group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-feather"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">裸感無痕零壓力</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        採用獨家超細旦纖維，輕盈如第二層肌膚。徹底擺脫鋼圈與勒痕拘束，無時無刻自在呼吸。
+                    </p>
+                </div>
+
+                <!-- 特色 2 -->
+                <div class="p-8 rounded-2xl bg-nude-50/60 border border-nude-100 hover:border-rose-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-500 text-2xl group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">瞬吸乾爽抑菌</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        底褲內襯選用天然桑蠶絲與抗菌面料，有效抑制細菌滋生，全天候保持私密處乾爽清爽。
+                    </p>
+                </div>
+
+                <!-- 特色 3 -->
+                <div class="p-8 rounded-2xl bg-nude-50/60 border border-nude-100 hover:border-rose-200 hover:shadow-xl transition-all duration-300 text-center group">
+                    <div class="w-16 h-16 mx-auto mb-6 rounded-2xl bg-rose-100 flex items-center justify-center text-rose-500 text-2xl group-hover:scale-110 group-hover:bg-rose-500 group-hover:text-white transition-all">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">立體提托美胸設計</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        獨家 W 型立體軟支撐架構，即使無鋼圈也能完美托高集中，塑造自然挺拔胸型不外擴。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 產品展示與介紹 Section -->
+    <section id="products" class="py-20 bg-nude-100/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <span class="text-rose-500 text-sm font-semibold tracking-widest uppercase">Popular Products</span>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mt-1">熱銷產品推薦</h2>
+                </div>
+                <!-- 篩選 Tab (簡單樣式) -->
+                <div class="mt-4 md:mt-0 flex gap-2 overflow-x-auto pb-2">
+                    <button onclick="filterProducts('all')" class="product-tab px-4 py-2 rounded-full text-sm font-medium bg-rose-500 text-white shadow">全部商品</button>
+                    <button onclick="filterProducts('bra')" class="product-tab px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-rose-50">舒適內衣</button>
+                    <button onclick="filterProducts('panty')" class="product-tab px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-rose-50">親膚內褲</button>
+                    <button onclick="filterProducts('set')" class="product-tab px-4 py-2 rounded-full text-sm font-medium bg-white text-gray-600 hover:bg-rose-50">超值套組</button>
+                </div>
+            </div>
+
+            <!-- 產品卡片 Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 產品 1 -->
+                <div class="product-card bra bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-72 overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80" 
+                             alt="雲朵裸感無鋼圈內衣" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x800/eee3d3/5c4a38?text=Bra'">
+                        <span class="absolute top-3 left-3 bg-rose-500 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">熱銷 No.1</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="text-xs text-rose-500 font-medium mb-1">無痕背心式 / 零感體驗</div>
+                        <h3 class="font-bold text-gray-800 text-lg group-hover:text-rose-500 transition-colors">雲朵裸感無鋼圈內衣</h3>
+                        <p class="text-gray-500 text-xs mt-1 line-clamp-2">極致無痕剪裁，透氣水滴型胸墊，如同沒穿一樣舒適自由。</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <div>
+                                <span class="text-rose-600 font-bold text-lg">NT$ 880</span>
+                                <span class="text-gray-400 text-xs line-through ml-1">NT$ 1,280</span>
+                            </div>
+                            <button onclick="openModal('雲朵裸感無鋼圈內衣', '880', 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=600&q=80', '極致無痕剪裁，透氣水滴型胸墊，提供絕佳包覆性與無負擔的支撐力。')" class="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-500 text-rose-500 hover:text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 產品 2 -->
+                <div class="product-card panty bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-72 overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80" 
+                             alt="蠶絲低腰無痕內褲" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x800/eee3d3/5c4a38?text=Panty'">
+                        <span class="absolute top-3 left-3 bg-gray-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">抑菌推薦</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="text-xs text-rose-500 font-medium mb-1">100% 桑蠶絲底檔</div>
+                        <h3 class="font-bold text-gray-800 text-lg group-hover:text-rose-500 transition-colors">桑蠶絲親膚無痕內褲 (3入)</h3>
+                        <p class="text-gray-500 text-xs mt-1 line-clamp-2">輕薄貼合不捲邊，天然桑蠶絲底褲襯，溫柔呵護私密肌膚。</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <div>
+                                <span class="text-rose-600 font-bold text-lg">NT$ 650</span>
+                                <span class="text-gray-400 text-xs line-through ml-1">NT$ 890</span>
+                            </div>
+                            <button onclick="openModal('桑蠶絲親膚無痕內褲 (3入)', '650', 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=600&q=80', '輕薄貼合不捲邊，天然桑蠶絲底褲襯，全天候保持乾爽抗菌。')" class="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-500 text-rose-500 hover:text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 產品 3 -->
+                <div class="product-card bra bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-72 overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?auto=format&fit=crop&w=600&q=80" 
+                             alt="法式蕾絲深V集中內衣" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x800/eee3d3/5c4a38?text=Lace+Bra'">
+                    </div>
+                    <div class="p-5">
+                        <div class="text-xs text-rose-500 font-medium mb-1">法式工藝 / 性感美背</div>
+                        <h3 class="font-bold text-gray-800 text-lg group-hover:text-rose-500 transition-colors">法式蕾絲深V集中內衣</h3>
+                        <p class="text-gray-500 text-xs mt-1 line-clamp-2">精緻睫毛蕾絲拼接，兼具唯美視覺與舒適集中支撐感。</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <div>
+                                <span class="text-rose-600 font-bold text-lg">NT$ 980</span>
+                                <span class="text-gray-400 text-xs line-through ml-1">NT$ 1,380</span>
+                            </div>
+                            <button onclick="openModal('法式蕾絲深V集中內衣', '980', 'https://images.unsplash.com/photo-1508427953056-b00b8d78ebf5?auto=format&fit=crop&w=600&q=80', '精緻睫毛蕾絲拼接，兼具唯美視覺與舒適集中支撐感，展現女人味。')" class="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-500 text-rose-500 hover:text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 產品 4 -->
+                <div class="product-card set bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+                    <div class="relative h-72 overflow-hidden bg-gray-100">
+                        <img src="https://images.unsplash.com/photo-1563178406-4cdc2923acbc?auto=format&fit=crop&w=600&q=80" 
+                             alt="奢華絲絨成套內著" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                             onerror="this.src='https://placehold.co/600x800/eee3d3/5c4a38?text=Set'">
+                        <span class="absolute top-3 left-3 bg-amber-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">限時組合</span>
+                    </div>
+                    <div class="p-5">
+                        <div class="text-xs text-rose-500 font-medium mb-1">內衣 + 內褲 超值組合</div>
+                        <h3 class="font-bold text-gray-800 text-lg group-hover:text-rose-500 transition-colors">晨曦裸光成套內著組</h3>
+                        <p class="text-gray-500 text-xs mt-1 line-clamp-2">同色系質感成套穿搭，散發由內而外的迷人自信與儀式感。</p>
+                        <div class="mt-4 flex justify-between items-center">
+                            <div>
+                                <span class="text-rose-600 font-bold text-lg">NT$ 1,280</span>
+                                <span class="text-gray-400 text-xs line-through ml-1">NT$ 1,780</span>
+                            </div>
+                            <button onclick="openModal('晨曦裸光成套內著組', '1280', 'https://images.unsplash.com/photo-1563178406-4cdc2923acbc?auto=format&fit=crop&w=600&q=80', '包含內衣與同款親膚內褲，同色系質感成套穿搭，輕鬆打造完整風格。')" class="w-9 h-9 rounded-full bg-rose-50 hover:bg-rose-500 text-rose-500 hover:text-white flex items-center justify-center transition-colors">
+                                <i class="fa-solid fa-eye text-sm"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 身材尺寸與內衣建議計算器 Section -->
+    <section id="size-calculator" class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-nude-100 to-rose-50 rounded-3xl p-6 sm:p-10 shadow-xl border border-nude-200">
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-rose-500 text-xs font-bold tracking-widest uppercase">Smart Fitting Assistant</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mt-1">智慧身材尺寸與內衣建議</h2>
+                    <p class="text-gray-600 text-sm mt-2">輸入您的胸圍數據與體型困擾，系統將即時為您推薦最適合的罩杯與內衣款式。</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                    <!-- 輸入表單區 -->
+                    <div class="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm border border-white space-y-4">
+                        <h3 class="font-bold text-gray-800 text-base border-b pb-2 flex items-center gap-2">
+                            <i class="fa-solid fa-tape text-rose-500"></i> 輸入您的身形數據
+                        </h3>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-700 mb-1">上胸圍 (cm) <span class="text-gray-400 font-normal">-- 經過乳頭繞胸部一圈</span></label>
+                            <input type="number" id="upper-bust" placeholder="例如：85" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-700 mb-1">下胸圍 (cm) <span class="text-gray-400 font-normal">-- 胸部底部凹陷處繞一圈</span></label>
+                            <input type="number" id="under-bust" placeholder="例如：73" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-700 mb-1">主要希望改善的身形需求</label>
+                            <select id="body-concern" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm text-gray-700 bg-white">
+                                <option value="comfort">追求極致舒適 / 零束縛感</option>
+                                <option value="pushup">希望小胸集中 / 提托上挺</option>
+                                <option value="side">改善副乳 / 上背肉包覆</option>
+                                <option value="seamless">貼身外衣穿搭 / 完全無痕</option>
+                            </select>
+                        </div>
+
+                        <button onclick="calculateSize()" class="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-medium shadow-md transition-all text-sm mt-2">
+                            <i class="fa-solid fa-wand-magic-sparkles mr-2"></i>開始分析與推薦
+                        </button>
+                    </div>
+
+                    <!-- 計算結果顯示區 -->
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-rose-100 h-full flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-bold text-gray-800 text-base border-b pb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-heart-pulse text-rose-500"></i> 您的專屬建議結果
+                            </h3>
+
+                            <div id="result-placeholder" class="py-12 text-center text-gray-400 space-y-2">
+                                <i class="fa-solid fa-ruler-combined text-4xl text-nude-300"></i>
+                                <p class="text-sm">請在左側輸入胸圍數據並點擊分析</p>
+                            </div>
+
+                            <!-- 隱藏的分析結果 -->
+                            <div id="result-content" class="hidden space-y-4 pt-4">
+                                <div class="bg-rose-50 p-4 rounded-xl text-center">
+                                    <div class="text-xs text-rose-600 font-medium">建議尺寸與罩杯</div>
+                                    <div id="calc-size" class="text-3xl font-serif font-bold text-rose-700 my-1">75B / M</div>
+                                    <div class="text-[11px] text-gray-500">上下胸圍差約 <span id="calc-diff" class="font-semibold text-rose-600">12</span> cm</div>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-xs font-bold text-gray-700 mb-1">適合您的內衣類型建議：</h4>
+                                    <p id="calc-recommendation" class="text-xs text-gray-600 bg-nude-50 p-3 rounded-lg leading-relaxed">
+                                        建議選擇具備側邊加高包覆感的「無鋼圈背心式內衣」，能有效提托並收納副乳。
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="text-xs font-bold text-gray-700 mb-1">推薦品牌系列：</h4>
+                                    <span id="calc-product-tag" class="inline-block bg-rose-100 text-rose-800 text-xs px-3 py-1 rounded-full font-medium">
+                                        雲朵裸感系列
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-gray-100 text-[11px] text-gray-400">
+                            * 註：建議尺寸為依據標準胸圍公式計算之參考值，實際穿著效果可能因胸型不同而異。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 會員參加 / 訂閱表單 Section -->
+    <section id="membership" class="py-20 bg-nude-100/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-nude-200 relative overflow-hidden">
+                <!-- 背景裝飾圈 -->
+                <div class="absolute -top-20 -right-20 w-60 h-60 bg-rose-100/50 rounded-full blur-2xl pointer-events-none"></div>
+
+                <div class="text-center max-w-xl mx-auto mb-8 relative z-10">
+                    <span class="text-rose-500 text-xs font-bold tracking-widest uppercase">VIP Membership</span>
+                    <h2 class="text-3xl font-serif font-bold text-gray-900 mt-1">加入 AURA 尊榮會員</h2>
+                    <p class="text-gray-600 text-sm mt-2">免費加入會員，立即獲得 <span class="text-rose-500 font-bold">$200 首購折價券</span> 與新品優先試穿資格！</p>
+                </div>
+
+                <form id="member-form" onsubmit="submitForm(event)" class="space-y-4 max-w-md mx-auto relative z-10">
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">您的姓名 <span class="text-rose-500">*</span></label>
+                        <input type="text" required placeholder="請輸入姓名" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">電子郵件 <span class="text-rose-500">*</span></label>
+                        <input type="email" required placeholder="example@email.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">行動電話</label>
+                        <input type="tel" placeholder="0912-345-678" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-400 text-sm">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-medium text-gray-700 mb-1">感興趣的系列 (可多選)</label>
+                        <div class="grid grid-cols-2 gap-2 text-xs text-gray-600 pt-1">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-rose-500 focus:ring-rose-400"> 裸感無痕系列
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-rose-500 focus:ring-rose-400"> 法式蕾絲系列
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-rose-500 focus:ring-rose-400"> 桑蠶絲內褲
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="checkbox" class="rounded text-rose-500 focus:ring-rose-400"> 運動舒適系列
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full bg-rose-500 hover:bg-rose-600 text-white font-medium py-3.5 rounded-xl shadow-lg hover:shadow-rose-200 transition-all text-sm mt-4">
+                        立即免費註冊領取優惠
+                    </button>
+                    
+                    <p class="text-[11px] text-gray-400 text-center">
+                        註冊即代表同意 AURA 之 <a href="#" class="underline hover:text-gray-600">服務條款</a> 與 <a href="#" class="underline hover:text-gray-600">隱私權政策</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-widest text-white">AURA</span>
+                    <p class="text-xs text-gray-400 mt-3 leading-relaxed">
+                        專為亞洲女性設計的輕奢無痕內著品牌，給妳最貼心的溫柔溫暖。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3">快速連結</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#features" class="hover:text-white transition-colors">品牌故事與特色</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">最新熱銷商品</a></li>
+                        <li><a href="#size-calculator" class="hover:text-white transition-colors">線上尺寸諮詢</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3">顧客服務</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="hover:text-white transition-colors">常見問題 FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">退換貨政策</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">內衣洗滌與保養指南</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3">關注我們</h4>
+                    <div class="flex space-x-4 text-lg">
+                        <a href="#" class="hover:text-rose-400 transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="hover:text-rose-400 transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" class="hover:text-rose-400 transition-colors"><i class="fa-brands fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+                &copy; 2026 AURA Intimates Inc. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- 產品快速預覽 Modal 彈窗 -->
+    <div id="product-modal" class="fixed inset-0 bg-black/60 z-50 hidden flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl relative animate-fade-in">
+            <button onclick="closeModal()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition-colors z-10">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="h-64 overflow-hidden relative bg-gray-100">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="p-6">
+                <h3 id="modal-title" class="text-xl font-bold text-gray-800"></h3>
+                <div class="text-rose-600 font-bold text-2xl my-2">NT$ <span id="modal-price"></span></div>
+                <p id="modal-desc" class="text-gray-600 text-sm leading-relaxed mb-6"></p>
+                <div class="flex gap-3">
+                    <button onclick="alert('感謝您的關注！此商品已加入預購清單。'); closeModal();" class="flex-1 bg-rose-500 hover:bg-rose-600 text-white font-medium py-3 rounded-xl transition-colors text-sm">
+                        立即購買 / 預購
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 自訂訊息 Message Box Modal -->
+    <div id="msg-box" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl p-6 max-w-sm w-full text-center shadow-xl space-y-4">
+            <div class="w-12 h-12 bg-rose-100 text-rose-500 rounded-full flex items-center justify-center mx-auto text-xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 id="msg-title" class="font-bold text-gray-800 text-lg">提示訊息</h3>
+            <p id="msg-content" class="text-sm text-gray-600"></p>
+            <button onclick="closeMsgBox()" class="w-full bg-rose-500 text-white py-2.5 rounded-xl font-medium text-sm">確定</button>
+        </div>
+    </div>
+
+    <!-- JavaScript 邏輯 -->
+    <script>
+        // 手機版選單切換
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 點擊選單連結後自動關閉手機版選單
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // 產品分類篩選功能
+        function filterProducts(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const tabs = document.querySelectorAll('.product-tab');
+
+            // 更新按鈕樣式
+            tabs.forEach(tab => {
+                tab.classList.remove('bg-rose-500', 'text-white', 'shadow');
+                tab.classList.add('bg-white', 'text-gray-600');
+            });
+
+            event.target.classList.remove('bg-white', 'text-gray-600');
+            event.target.classList.add('bg-rose-500', 'text-white', 'shadow');
+
+            // 篩選卡片
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // 產品快速預覽 Modal
+        function openModal(title, price, imgSrc, desc) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-price').innerText = price;
+            document.getElementById('modal-img').src = imgSrc;
+            document.getElementById('modal-desc').innerText = desc;
+            document.getElementById('product-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        // 智慧尺寸計算器邏輯
+        function calculateSize() {
+            const upper = parseFloat(document.getElementById('upper-bust').value);
+            const under = parseFloat(document.getElementById('under-bust').value);
+            const concern = document.getElementById('body-concern').value;
+
+            if (!upper || !under || upper <= under) {
+                showMessageBox("請輸入正確的胸圍數據", "上胸圍數值需大於下胸圍，請重新確認輸入。");
+                return;
+            }
+
+            const diff = upper - under;
+
+            // 算底圍 (70, 75, 80, 85...)
+            let bandSize = 70;
+            if (under >= 68 && under < 73) bandSize = 70;
+            else if (under >= 73 && under < 78) bandSize = 75;
+            else if (under >= 78 && under < 83) bandSize = 80;
+            else if (under >= 83 && under < 88) bandSize = 85;
+            else if (under >= 88) bandSize = 90;
+
+            // 算罩杯 (A, B, C, D...)
+            let cup = 'A';
+            if (diff >= 9 && diff < 11.5) cup = 'A';
+            else if (diff >= 11.5 && diff < 14) cup = 'B';
+            else if (diff >= 14 && diff < 16.5) cup = 'C';
+            else if (diff >= 16.5 && diff < 19) cup = 'D';
+            else if (diff >= 19) cup = 'E';
+
+            // 身形建議邏輯
+            let recText = "";
+            let prodTag = "";
+
+            if (concern === 'comfort') {
+                recText = `您適合追求無感的 ${bandSize}${cup} 罩杯！建議選擇採用無鋼圈裸感布料與一體成型水滴墊的背心式內衣。`;
+                prodTag = "雲朵裸感系列";
+            } else if (concern === 'pushup') {
+                recText = `針對 ${bandSize}${cup} 罩杯，建議挑選具備下厚上薄或 W 型立體軟托結構的款式，能輕鬆達成集中挺拔效果。`;
+                prodTag = "法式蕾絲集中系列";
+            } else if (concern === 'side') {
+                recText = `建議選擇側邊加高 (10cm 以上) 與 U 型美背設計的內衣，能完整收納副乳並平整背部線條。`;
+                prodTag = "全包覆包覆系列";
+            } else {
+                recText = `推薦選用高彈力無痕點膠工藝內衣，穿著 T-shirt 或貼身洋裝時完全不顯露痕跡。`;
+                prodTag = "隱形無痕系列";
+            }
+
+            // 更新 UI 顯示
+            document.getElementById('calc-size').innerText = `${bandSize}${cup}`;
+            document.getElementById('calc-diff').innerText = diff.toFixed(1);
+            document.getElementById('calc-recommendation').innerText = recText;
+            document.getElementById('calc-product-tag').innerText = prodTag;
+
+            document.getElementById('result-placeholder').classList.add('hidden');
+            document.getElementById('result-content').classList.remove('hidden');
+        }
+
+        // 會員表單提交
+        function submitForm(event) {
+            event.preventDefault();
+            showMessageBox("歡迎加入 VIP 會員！", "恭喜您已成功註冊，我們的 $200 首購折扣碼已傳送至您的電子郵件！");
+            document.getElementById('member-form').reset();
+        }
+
+        // 自訂 Message Box 控制
+        function showMessageBox(title, content) {
+            document.getElementById('msg-title').innerText = title;
+            document.getElementById('msg-content').innerText = content;
+            document.getElementById('msg-box').classList.remove('hidden');
+        }
+
+        function closeMsgBox() {
+            document.getElementById('msg-box').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
